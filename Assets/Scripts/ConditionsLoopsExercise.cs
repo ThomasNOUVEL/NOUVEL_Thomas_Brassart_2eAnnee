@@ -80,10 +80,18 @@ public class Exercice : MonoBehaviour
 
     void PrintFactorial(int _factorialValue)
     {
-        int resultat = _factorialValue;
-        for (int incrément = _factorialValue - 1; incrément > 0; incrément--)
-            resultat = resultat * incrément;
-        Debug.Log(resultat);
+        if (_factorialValue <= 0)
+        {
+            Debug.Log("entiez un entier positif pls");
+        }
+        else
+        {
+            int resultat = _factorialValue;
+            for (int incrément = _factorialValue - 1; incrément > 0; incrément --)
+                resultat = resultat * incrément;
+            Debug.Log(resultat);
+        }
+        
     }
 
 
