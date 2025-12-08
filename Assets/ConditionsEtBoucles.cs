@@ -44,7 +44,7 @@ public class ConditionsEtBoucles : MonoBehaviour
         }
 
         bool player = true;
-        playerCount = player ? 1 : 0;   // if player = true: playerCount = 1        else: playerCount = 0
+        int playerCount = player ? 1 : 0;   // if player = true: playerCount = 1        else: playerCount = 0
 
 
         string playerName = null;
