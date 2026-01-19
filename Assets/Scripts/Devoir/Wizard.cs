@@ -20,18 +20,17 @@ public class Wizard : CharacterClass
 
     }
 
-    private new void Moove()
+    public void Moove()
     {
 
         // déplacement ZQSD
         
     }
 
-    private void Fireball()
+    private void Fireball(IDestructible ListFireBallComponentCast)
     {
 
-        // lance une boule de feu qui renvoie une liste : ListFireBallComponentCast qui recoeuil les éléments touchées
-        // détruit tout les éléments de ListFireBallComponentCast qui ont l'iterface IDestructible
+        // détruit tout les éléments de ListFireBallComponentCast
 
     }
 

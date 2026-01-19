@@ -7,6 +7,6 @@ public class WallClass : MonoBehaviour, IDestructible
 
     public void DestroySelf()
     {
-        throw new System.NotImplementedException();
+        // Auto destruction
     }
 }

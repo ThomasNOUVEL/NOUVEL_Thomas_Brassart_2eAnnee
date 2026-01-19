@@ -3,18 +3,16 @@ using UnityEngine;
 public class CharacterClass : MonoBehaviour
 {
 
-    public int HealthMax = 100;
+    protected int HealthMax = 100;
 
-    public int Health = 100;
+    protected int Health = 100;
 
-    public string Name = "Bernard";
+    protected string Name = "Bernard";
 
-    public Vector3 EndWalkVector = Vector3.zero;
-
-    public void Moove()
+    public void MooveTo(Vector3 Destination)
     {
 
-        // déplace de sa position jusqu'a EndWalkVector.
+        // déplace de sa position jusqu'a Destination.
 
     }
 

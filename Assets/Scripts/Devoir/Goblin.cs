@@ -4,7 +4,9 @@ using UnityEngine.UIElements;
 public class GoblinClass : CharacterClass, IDestructible
 {
 
-    
+    protected Vector3 StartWalkVector = Vector3.zero;
+
+    protected Vector3 EndWalkVector = Vector3.zero;
 
     private void Start()
     {
@@ -15,21 +17,18 @@ public class GoblinClass : CharacterClass, IDestructible
 
         Name = "PasBernard";
 
-        Vector3 StartWalkVector = Vector3.zero;
-
     }
 
-    private new void Moove()
+    public void MooveBetween()
     {
 
-        // déplace de StartWalkVector jusqu'a EndWalkVector.
-        // StartWalkVector devien EndWalkVector.
+        // Alterne entre MooveTo(StartWalkVector); et MooveTo(EndWalkVector);
 
     }
 
     public void DestroySelf()
     {
-        throw new System.NotImplementedException();
+        // Auto destruction
     }
 }
 
