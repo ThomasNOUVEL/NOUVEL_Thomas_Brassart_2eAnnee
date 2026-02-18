@@ -22,9 +22,11 @@ public class Sphere : MonoBehaviour
     {
 
 
-        _lookAtConstraintReference.// AddSource;
+        //_lookAtConstraintReference.AddSource;          ( ajouter sois meme au lookAtConstraint)
 
         await Awaitable.WaitForSecondsAsync(_lifeTime);
+
+        //                                               ( retirer sois meme au lookAtConstraint)
 
         Destroy(gameObject);
 
