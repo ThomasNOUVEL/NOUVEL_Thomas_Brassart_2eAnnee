@@ -1,19 +1,27 @@
 using UnityEngine;
+using UnityEngine.AI;
+
+
 
 public class PlayerMouvement : MonoBehaviour
 {
 
-    public Camera Camera;
+    public Camera camera;
+    public NavMeshAgent navMeshReference;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private void Update()
     {
-        RaycastHit hit;
-        Ray ray = Camera.ScreenPointToRay(Input.mousePosition);
 
-        if (Physics.Raycast(ray, out hit))
+        if(Input.GetMouseButtonDown(0))
         {
-            Debug.Log(hit);
+            RaycastHit hit;
+            Ray ray = camera.ScreenPointToRay(Input.mousePosition);
+
+            if (Physics.Raycast(ray, out hit))
+            {
+                Debug.Log(hit.point);
+                navMeshReference.SetDestination(hit.point);
+            }
         }
 
     }
