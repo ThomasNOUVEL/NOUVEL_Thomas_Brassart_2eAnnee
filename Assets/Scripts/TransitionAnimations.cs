@@ -21,24 +21,28 @@ public class TransitionAnimations : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-
+            animator.SetBool("Jump", true);
             animator.Play(Animator.StringToHash("Jump"), 0, 0.25f);           // Jump
-
+        }
+        else
+        {
+            animator.SetBool("Jump", false);
         }
 
 
         if (Input.GetKeyDown(KeyCode.W))
         {
-            animator.SetBool("Walk", True);
-            Debug.Log("walk");
+            animator.SetBool("Walk", true);
             animator.Play(Animator.StringToHash("Crouched Walking"), 0, 0.25f);           // Walk
-
         }
+        else
+        {
+            animator.SetBool("Walk", false);
+        }
+
 
         if (Input.GetKeyDown(KeyCode.Q))
         {
-
-            Debug.Log("run");
             animator.Play(Animator.StringToHash("Run"), 0, 0.25f);           // Run
 
         }
