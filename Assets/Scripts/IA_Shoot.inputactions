@@ -1,0 +1,35 @@
+{
+    "version": 1,
+    "name": "IA_Shoot",
+    "maps": [
+        {
+            "name": "Player",
+            "id": "cab6279c-838c-4153-8840-2cd84c433025",
+            "actions": [
+                {
+                    "name": "Shoot",
+                    "type": "Button",
+                    "id": "e92e139d-ab32-468c-bf88-e8ed5713ae21",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "26e82691-50e3-4b8c-be89-21c6993e4e43",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Shoot",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
