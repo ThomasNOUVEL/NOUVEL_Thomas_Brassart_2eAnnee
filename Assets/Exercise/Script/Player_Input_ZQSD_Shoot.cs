@@ -1,36 +1,32 @@
-using System.Security.Cryptography.X509Certificates;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class Player_Input_ZQSD_Shoot : MonoBehaviour
 {
+    private Vector2 _movement = Vector2.zero;
 
-    public void OnMoove(InputAction.CallbackContext context)
+    [SerializeField] private float _movementSpeed = 5;
+
+
+    public void OnMove(InputAction.CallbackContext context)
     {
         if (context.performed)
         {
-
-            Vector2 movement = context.ReadValue<Vector2>();
-            Vector2 location = transform.position;
-            Vector2 tryToMoove = location + movement;
-
-            transform.position = tryToMoove;
+            _movement = context.ReadValue<Vector2>() * _movementSpeed;
         }
+        if (context.canceled)
+        {
+            _movement = Vector2.zero;
+        }    
 
     }
 
-    public void OnShoot(InputAction.CallbackContext context)
-    {
-
-
-
-    }
+    
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        Vector2 startLocation = transform.position;
+        
     }
 
     
@@ -38,6 +34,11 @@ public class Player_Input_ZQSD_Shoot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
+        transform.position += (Vector3)_movement * Time.deltaTime;
+        float movementX = Mathf.Clamp(transform.position.x, -13, 13);
+        float movementY = Mathf.Clamp(transform.position.y, -10, 10);
+        transform.position = new Vector2(movementX, movementY);
+
     }
 }

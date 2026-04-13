@@ -3,6 +3,7 @@ using UnityEngine.InputSystem;
 
 public class InputScript : MonoBehaviour
 {
+    
 
     public void Shoot(InputAction.CallbackContext context)
     {
